@@ -1,0 +1,105 @@
+.seguros-pagina-bg{
+  background-color: var(--cor-6);
+  max-width: 100%;
+}
+.seguros-pagina-cont{
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+.seguros-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, max-content));
+  margin-top: 81px;
+  gap: 40px 40px;
+}
+.seguros-div h3{
+  margin: 0px;
+}
+@media(max-width:800px){
+  .seguros-grid{
+    grid-template-columns: 1fr;
+    padding-left: 20px;
+  }
+  .seguros-div p{
+        max-width: 30ch;
+  }
+  .seguros-pagina-cont h1{
+    text-align: center;
+    font-size: 2rem;
+  }
+}
+.perguntas-container{
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.perguntas-container h1{
+  margin-bottom: 60px;
+}
+.perguntas-container dl > div{
+  padding: 20px;
+  border-radius: 4px;
+}
+.perguntas-container dl > div:nth-child(odd){
+  background-color: var(--cor-1);
+}
+.perguntas-container button::before{
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 8px;
+  background-color: var(--cor-p1);  
+}
+.perguntas-container button::after{
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 6px;
+  background: url("../../img/icones/seta-abrir.svg");
+  transition: 0.3s;
+}
+.perguntas-container button{
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0px 10px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+}
+.perguntas-container button:hover::after,
+.perguntas-container button[aria-expanded="true"]::after{
+  transform: rotate(180deg);
+}
+.js .perguntas-container dd{
+  display: none;
+}
+.js .perguntas-container dd.ativa{
+  display: block;
+}
+.perguntas-container dd{
+  padding-left: 20px;
+  padding-top: 10px;
+  max-width: 80ch;
+}
+@media(max-width:800px){
+  .perguntas-container{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .perguntas-container h1{
+    margin-bottom: 40px;
+    font-size: 1.5rem;
+  }
+  .perguntas-container dd{
+    max-width: 30ch;
+  }
+}

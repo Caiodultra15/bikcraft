@@ -1,0 +1,123 @@
+.bike-bg{
+  background-color: var(--cor-11);
+  margin-top: 0px;
+}
+.bike-bg h3{
+  margin-top: 0px;
+  padding-top: 60px;
+}
+.bike-bg h1{
+  padding-bottom: 60px;
+}
+.container-bike{
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media(max-width:800px){
+  .bike-bg h3{
+    font-size: 1rem;
+    text-align: center;
+    padding-top: 40px;
+  }
+  .bike-bg h1{
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 40px;
+  }
+}
+.bicicleta-bg{
+  background:var(--cor-12);
+}
+.bike-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  max-width: 1200px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+.bike-img span {
+  background-color: var(--cor-12);
+  padding: 5px 13px 5px 13px;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  border-radius: 4px 0px 0px 4px ;
+}
+.bike-img{
+  position: relative;
+}
+.botao-bike{
+  text-align: left;
+}
+.bike-conteudo{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-content: start;
+}
+.bike-conteudo h2, .bike-conteudo p{
+  grid-column: 1/-1;
+}
+.bike-conteudo h2{
+  margin-bottom: 20px;
+}
+.bike-conteudo h2::before{
+  content: "";
+  display: block;
+  height: 8px;
+  width: 12px;
+  background-color: var(--cor-p1);
+}
+.bike-conteudo p{
+  margin-bottom: 32px;
+}
+.bike-conteudo a{
+  place-self: end;
+}
+.bike-conteudo li{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.bike-conteudo img{
+  width: 30px;
+}
+.bike-conteudo li+li{
+  margin-top: 10px;
+}
+.botao.seta::after{
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 10px;
+  margin-left: 12px;
+  background: url("../img/icones/seta.svg");
+  transition: transform 0.3s;
+}
+.botao.seta:hover::after{
+  transform: translateX(4px);
+}
+@media(max-width:800px){
+  .bike-container{
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .bike-conteudo{
+    grid-template-columns: 1fr;
+  }
+  .bike-conteudo a {
+    place-self: start;
+    margin-top: 10px;
+  }
+  .bike-conteudo{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
